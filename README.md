@@ -1,13 +1,7 @@
 <div align="center">
-
-```
-██████╗  █████╗ ██████╗ ████████╗ ██████╗ ██████╗
-██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗
-██████╔╝███████║██████╔╝   ██║   ██║   ██║██████╔╝
-██╔══██╗██╔══██║██╔═══╝    ██║   ██║   ██║██╔══██╗
-██║  ██║██║  ██║██║        ██║   ╚██████╔╝██║  ██║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝        ╚═╝    ╚═════╝ ╚═╝  ╚═╝
-```
+<p align="center">
+  <img src="raptor-logo.svg" alt="RAPTOR — Recon Automation Pipeline for Target Operations & Reporting" width="100%">
+</p>
 
 **Recon Automation Pipeline for Target Operations & Reporting**
 
