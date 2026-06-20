@@ -1,0 +1,61 @@
+# Recon Pipeline — Example Configuration
+# Copy to config.yaml and adjust as needed
+
+output_dir: reports
+log_level: INFO
+
+subfinder:
+  timeout: 30
+  threads: 10
+  all_sources: false
+  resolvers:
+    - 1.1.1.1
+    - 8.8.8.8
+  # sources:
+  #   - shodan
+  #   - censys
+  #   - virustotal
+
+httpx:
+  threads: 50
+  timeout: 10
+  follow_redirects: true
+  tech_detect: true
+  rate_limit: 150
+  status_codes:
+    - 200
+    - 301
+    - 302
+    - 403
+    - 404
+    - 500
+
+ffuf:
+  threads: 40
+  timeout: 10
+  rate: 100
+  wordlist: wordlists/common.txt
+  extensions: php,html,js,txt,json,bak
+  filter_codes: "404,400"
+  recursion: false
+  recursion_depth: 2
+
+nuclei:
+  threads: 25
+  timeout: 10
+  rate_limit: 150
+  retries: 1
+  severity:
+    - critical
+    - high
+    - medium
+    - low
+  exclude_tags:
+    - dos
+    - fuzz
+  # templates:
+  #   - cves/
+  #   - exposures/
+  #   - misconfigurations/
+
+# proxy: http://127.0.0.1:8080
